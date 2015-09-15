@@ -1303,6 +1303,12 @@
 		width: 20em;
 		z-index: _misc(z-index-base) + 2;
 
+        .fa{
+            float:left;
+            margin-top: 5px;
+            margin-right: 15px;
+        }
+
 		ul {
 			list-style: none;
 			padding: 0;
