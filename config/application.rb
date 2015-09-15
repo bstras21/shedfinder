@@ -22,5 +22,11 @@ module Shedfinder
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+      # Enable the asset pipeline
+        config.assets.enabled = true
+        config.assets.precompile += %w(
+          ie.css
+    )
   end
 end
