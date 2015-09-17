@@ -64,6 +64,10 @@
     color: yellow;
 }
 
+.green{
+    color:#006301
+}
+
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
 		border-bottom: dotted 1px;
@@ -850,6 +854,10 @@
 			font-size: 1.35em;
 		}
 
+         a{
+            border: none !important;
+        }
+
 		&.special {
 			background-color: _palette(accent6, bg);
 			box-shadow: none !important;
@@ -1056,6 +1064,7 @@
 				background: _palette($p, border-bg);
 			}
 
+
 		// Section/Article
 
 			header {
@@ -1217,9 +1226,25 @@
 
 	}
 
+    .contentImageRight{
+                float: right;
+                width:500px;
+                height:auto;
+                max-width: 100%;
+                margin: 0px 0px 10px 10px;
+    }
+
+    .contentImageLeft{
+                float: left;
+                width:500px;
+                height:auto;
+                max-width: 100%;
+                margin: 0px 10px 10px 0px;
+    }
+
 	.wrapper {
 		@include padding(6em, 0);
-
+        overflow: auto;
 		> .inner {
 			width: 60em;
 			margin: 0 auto;
@@ -1231,6 +1256,7 @@
 			@include breakpoint(medium) {
 				width: 100%;
 			}
+
 		}
 
 		&.alt {
@@ -1686,7 +1712,7 @@
 			background-size: cover;
 			text-align: center;
 
-			h2 {
+			h2, h1 {
 				font-size: 1.75em;
 				margin: 0 0 (_size(element-margin) * 0.25) 0;
 			}

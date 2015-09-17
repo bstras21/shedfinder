@@ -7,4 +7,10 @@ class HtmlPagesController < ApplicationController
 
   def contact
   end
+
+  def login
+  end
+
+  def shed_antler_sellers
+  end
 end

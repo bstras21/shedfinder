@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   root 'html_pages#home'
 
-  get 'about'   => 'html_pages#about'
+  get 'about_shed_finder'   => 'html_pages#about_shed_finder'
   get 'contact' => 'html_pages#contact'
+  get 'sell_shed_antlers' => 'html_pages#sell_shed_antlers'
+  get 'buy_shed_antlers' => 'html_pages#buy_shed_antlers'
+  get 'buy_antler_dog_chews' => 'html_pages#buy_antler_dog_chews'
+  get 'shed_finder_sign_up' => 'html_pages#shed_finder_sign_up'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
