@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'sell_shed_antlers' => 'html_pages#sell_shed_antlers'
   get 'buy_shed_antlers' => 'html_pages#buy_shed_antlers'
   get 'buy_antler_dog_chews' => 'html_pages#buy_antler_dog_chews'
-  get 'shed_finder_sign_up' => 'html_pages#shed_finder_sign_up'
+
+
+  get 'shed_finder_sign_up' => 'users#new'
+  get 'login' => 'users#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
