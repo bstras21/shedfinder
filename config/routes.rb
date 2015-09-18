@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'shed_finder_sign_up' => 'users#new'
   post '/users' => 'users#create'
+  get "users/:id/edit" => "users#edit", :as => :user
 
 
 

@@ -87,6 +87,7 @@
     color:#006301
 }
 
+
 	a {
 		@include vendor('transition', ('color #{_duration(transitions)} ease', 'border-bottom-color #{_duration(transitions)} ease'));
 		border-bottom: dotted 1px;
@@ -1768,6 +1769,9 @@
 				}
 			}
 		}
+        > .smallHeader{
+        padding: 3em 0 2em 0;
+        }
 	}
 
 	body.is-mobile {

@@ -1,7 +1,7 @@
 <% provide(:title, "Dashboard") %>
 <!-- Main -->
 					<article id="main">
-						<header style="padding:3em 0 2em 0">
+						<header class="smallHeader">
 							<h1><%= current_user.name %>'s Dashboard</h1>
 						</header>
 						<section class="wrapper style5">
@@ -9,6 +9,8 @@
                                 <% if current_user.admin == true %>
 
                                 <% end %>
+                              <%= link_to "Settings", edit_user_path(current_user) %>
+
 							</div>
 						</section>
 					</article>
