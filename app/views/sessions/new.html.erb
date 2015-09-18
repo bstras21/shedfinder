@@ -7,6 +7,9 @@
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
+                               <% flash.each do |key, value| %>
+                                <%= content_tag(:div, value, class: "red alert-#{key}") %>
+                              <% end %>
                                 <% if current_user %>
                                     <h3>Hi <%= current_user.name %> You are logged in</h3>
                                 <% else %>

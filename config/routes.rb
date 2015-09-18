@@ -13,10 +13,14 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
 
+
   # these routes are for showing users a login form, logging them in, and logging them out.
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
+
+    get 'auth_dashboard' => 'auth_pages#auth_dashboard'
 
 
 
