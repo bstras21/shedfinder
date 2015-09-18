@@ -6,10 +6,23 @@ Rails.application.routes.draw do
   get 'sell_shed_antlers' => 'html_pages#sell_shed_antlers'
   get 'buy_shed_antlers' => 'html_pages#buy_shed_antlers'
   get 'buy_antler_dog_chews' => 'html_pages#buy_antler_dog_chews'
+  get 'signup_success' => 'html_pages#signup_success'
 
 
   get 'shed_finder_sign_up' => 'users#new'
-  get 'login' => 'users#login'
+  post '/users' => 'users#create'
+
+
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

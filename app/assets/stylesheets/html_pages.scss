@@ -22,6 +22,21 @@
 	));
 
 /* Basic */
+    @mixin box_sizing {
+      -moz-box-sizing:    border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing:         border-box;
+    }
+
+    .debug_dump {
+      clear: both;
+      float: left;
+      width: 100%;
+      margin-top: 45px;
+        background-color: #eee;
+      @include box_sizing;
+    }
+
 
 	@-ms-viewport {
 		width: device-width;
@@ -1479,7 +1494,7 @@
 								padding: 0 1.5em;
 
 								span {
-									display: none;
+//									display: none;
 								}
 							}
 						}

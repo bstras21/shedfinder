@@ -1,6 +1,10 @@
 <!-- Header -->
         <header id="header" class="alt">
-            <img style="margin:5px 0px 0px 10px; width:auto; max-height: 80%;" src="assets/ShedFinder.png" alt="" />
+            <% if current_user %>
+               &nbsp;Welcome <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+            <% else %>
+               <img style="margin:5px 0px 0px 10px; width:auto; max-height: 80%;" src="assets/ShedFinder.png" alt="" />
+            <% end %>
             <nav id="nav">
                 <ul>
                     <li class="special">

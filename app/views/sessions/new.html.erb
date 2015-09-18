@@ -1,0 +1,27 @@
+<% provide(:title, "Shed Finder Log In") %>
+<!-- Main -->
+					<article id="main">
+						<header>
+							<h1>Shed Finder Log In</h1>
+							<p>Log In To See Available Antlers</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+                                <% if current_user %>
+                                    <h3>Hi <%= current_user.name %> You are logged in</h3>
+                                <% else %>
+                                    <h3>Sign In</h3>
+                                   <%= form_tag '/login' do %>
+
+                                      Email: <%= text_field_tag :email %>
+                                    <br/>
+                                      Password: <%= password_field_tag :password %>
+                                    <br/>
+                                    <span class="special"><%= submit_tag "Log In", :class => 'special' %></span>
+
+                                    <% end %>
+                                <% end %>
+							</div>
+						</section>
+					</article>
+<%= render 'layouts/footer' %>

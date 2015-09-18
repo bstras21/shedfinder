@@ -1,5 +1,6 @@
 <% provide(:title, "Shed Finder Sign Up") %>
 <% $states = [
+    ['- Location -',''],
     ['Alabama','AL'],
     ['Alaska','AK'],
     ['Arizona','AZ'],
@@ -62,13 +63,26 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
-                            <p>
-                                There is no cost for signing up, it's absolutely <span class="green">FREE</span>!
-                            </p>
-                            <hr/>
-                            <h3>Free Sign Up!</h3>
 
-                                    <%= form_for :user, url: '/users' do |f| %>
+                                <%= form_for @user do |f| %>
+
+
+                            <% if @user.errors.any? %>
+                              <h2 style="color:#f00">Errors:</h2>
+                                <ul>
+                                    <% @user.errors.full_messages.each do |message| %>
+                                    <li style="color:#f00"><%= message %></li>
+                                    <% end %>
+                                </ul>
+
+                                <% else %>
+                                <p>There is no cost for signing up, it's absolutely <span class="green">FREE</span>!</p>
+                                <hr/>
+                                <h3>Free Sign Up!</h3>
+                            <% end %>
+
+
+
                                         <div class="row uniform">
                                             <div class="6u 12u$(xsmall)">
                                                 <%= f.text_field :name, :placeholder => "First & Last Name" %>
@@ -94,14 +108,16 @@
                                                 <%= f.check_box :seller %>
                                                 <label for="user_seller">Seller</label>
                                             </div>
+<!--
                                             <div class="4u$ 12u$(small)">
                                                 <input type="checkbox" id="signup-spam" name="signup-spam" >
                                                 <label for="signup-spam">Not spam</label>
                                             </div>
+-->
 
                                             <div class="12u$">
                                                 <div class="select-wrapper">
-                                                    <%= select_tag(:option, options_for_select($states, selected: :option )) %>
+                                                    <%= f.select :location, options_for_select($states) %>
                                                 </div>
                                             </div>
 
