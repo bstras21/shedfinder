@@ -1,7 +1,7 @@
 <!-- Header -->
         <header id="header" class="alt">
             <% if current_user %>
-               &nbsp;Welcome <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+            &nbsp;Welcome <%= link_to current_user.name, '/auth_dashboard' %> | <%= link_to "Logout", '/logout' %>
             <% else %>
                <img style="margin:5px 0px 0px 10px; width:auto; max-height: 80%;" src="assets/ShedFinder.png" alt="" />
             <% end %>
