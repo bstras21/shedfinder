@@ -10,7 +10,7 @@
 							Shed finder brings antler sellers and antler buyers together.<br />
 							Top dollar for shed antlers!</p>
 							<ul class="actions">
-								<li><span class="button special"><%= link_to "Sign Up",  shed_finder_sign_up_path %></span></li>
+                                <li><span class="button special"><%= link_to "Sign Up", controller: "users", action: "new", id: @users %></span></li>
 							</ul>
 						</div>
 <!--						<a href="#one" class="more scrolly">Learn More</a>-->
@@ -40,7 +40,7 @@
 								<h2>Sell Your Antlers !!</h2>
 								<p>List your shed antlers online to receive offers. We <span class="yellow">GAURANTEE</span> you will receive at least one offer!!</p>
                             <ul class="actions">
-                                <li><span class="button special"><%= link_to "Start Selling",  shed_finder_sign_up_path %></span></li>
+                                <li><span class="button special"><%= link_to "Start Selling", controller: "users", action: "new", id: @users %></span></li>
 							</ul>
 							</div>
 						</section>
@@ -49,7 +49,7 @@
 								<h2>Buy Antlers Now!!</h2>
 								<p>Sign up for <span class="yellow">FREE</span> to access our complete list of antler for sale.</p>
                             <ul class="actions">
-                                <li><span class="button special"><%= link_to "Buy Antlers Now",  shed_finder_sign_up_path %></span></li>
+                                <li><span class="button special"><%= link_to "Buy Antlers", controller: "users", action: "new", id: @users %></span></li>
 							</ul>
 							</div>
 						</section>
@@ -58,7 +58,7 @@
 								<h2>Order Antler Dog Chews!! </h2>
 								<p>If you're looking for an all natural antler dog chew Shed Finder is your place!</p>
                             <ul class="actions">
-                                <li><span class="button special"><%= link_to "Order Antler Chews",  shed_finder_sign_up_path %></span></li>
+                                <li><span class="button special"><%= link_to "Order Antler Chews", controller: "users", action: "new", id: @users %></span></li>
 							</ul>
 							</div>
 						</section>
@@ -110,7 +110,7 @@
                                 <p>It's <span class="yellow">FREE</span> and easy plus there is no obligation.</p>
 							</header>
 							<ul class="actions vertical">
-								<li><span class="button fit special"><%= link_to "Sign Up",  shed_finder_sign_up_path %></span></li>
+								<li><span class="button fit special"><%= link_to "Sign Up", controller: "users", action: "new", id: @users %></span></li>
 								<li><span class="button fit"><%= link_to "Contact Us",  contact_path %></span></li></li>
 							</ul>
 						</div>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     #this means they have to be logged in to see this page
-    before_filter :authorize
+    #before_filter :authorize <- this is restric all
+    before_filter :require_login, only: [:edit, :destroy, :update]
 
   def new
     @user = User.new
@@ -39,6 +40,12 @@ class UsersController < ApplicationController
       def user_params
           params.require(:user).permit(:name, :email, :password, :password_confirmation, :phone, :location, :buyer, :seller)
       end
+
+    def require_login
+    unless current_user
+      redirect_to login_url
+    end
+  end
 
 
 end
