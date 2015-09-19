@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   get 'signup_success' => 'html_pages#signup_success'
 
 
-  get 'shed_finder_sign_up' => 'users#new'
-  post '/users' => 'users#create'
-  get "users/:id/edit" => "users#edit", :as => :user
+#  get 'shed_finder_sign_up' => 'users#new'
+#  post '/users' => 'users#create'
+#  get "users/:id/edit" => "users#edit", :as => :user
+
+
+ resources :users
+
 
 
 
@@ -21,7 +25,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
 
-    get 'auth_dashboard' => 'auth_pages#auth_dashboard'
+  get 'user_dashboard' => 'users#user_dashboard'
 
 
 

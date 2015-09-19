@@ -1,7 +1,7 @@
 <!-- Header -->
         <header id="header" class="alt">
             <% if current_user %>
-            &nbsp;Welcome <%= link_to current_user.name, '/auth_dashboard' %> | <%= link_to "Logout", '/logout' %>
+            &nbsp;Welcome <%= link_to current_user.name, '/user_dashboard' %> | <%= link_to "Logout", '/logout' %>
             <% else %>
                <img style="margin:5px 0px 0px 10px; width:auto; max-height: 80%;" src="assets/ShedFinder.png" alt="" />
             <% end %>
@@ -16,7 +16,7 @@
                                 <li><i class="fa fa-money"></i><%= link_to "Sellers",  sell_shed_antlers_path %></li>
                                 <li><i class="fa fa-shopping-cart"></i><%= link_to "Buyers",  buy_shed_antlers_path %></li>
                                 <li><i class="fa fa-cutlery"></i><%= link_to "Antler Dog Chews",  buy_antler_dog_chews_path %></li>
-                                <li><i class="fa fa-pencil"></i><%= link_to "Sign Up",  shed_finder_sign_up_path %></li>
+                                <li><i class="fa fa-pencil"></i><%= link_to "Sign Up",  root_path %></li>
                                 <li><i class="fa fa-key"></i><%= link_to "Log In",  login_path %></li>
                                 <li><i class="fa fa-dot-circle-o"></i><a href="#">Contact Us</a></li>
                             </ul>

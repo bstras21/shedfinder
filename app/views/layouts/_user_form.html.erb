@@ -131,7 +131,9 @@
                                 <div class="12u$">
                                     <ul class="actions">
                                         <li><%= f.submit "Submit", :class=> 'special' %></li>
+                                        <% if @user.new_record? %>
                                         <li><input type="reset" value="Reset" /></li>
+                                        <% end %>
                                     </ul>
                                  </div>
                         <% end %>
