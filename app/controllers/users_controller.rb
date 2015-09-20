@@ -11,13 +11,18 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = user.id
-        redirect_to '/signup_success'
+
+#       Sends email to user when user is created.
+        EmailUserRegistration.send_admin_user_registration(@user).deliver_now
+
+      session[:user_id] = @user.id
+      redirect_to '/signup_success'
     else
         render 'new'
     end
 
   end
+
 
 
   def edit
@@ -27,7 +32,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      #flash[:success] = "Profile updated"
         redirect_to '/user_dashboard'
 
     else

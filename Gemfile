@@ -17,6 +17,10 @@ gem 'turbolinks',              '2.3.0'
 gem 'jbuilder',                '2.2.3'
 gem 'sdoc',                    '0.4.0', group: :doc
 gem 'pg',          '0.18.3'
+#gem 'rest-client', '~> 1.8.0'
+#gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+gem 'certified'
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
 
 group :development, :test do
   gem 'byebug',      '3.4.0'
