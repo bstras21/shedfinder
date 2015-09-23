@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+      <h1><%= @cheworder.name %> - created a chew order</h1>
+    <ul>
+        <li>Email:      <%= @cheworder.email %></li>
+        <li>Phone:      <%= @cheworder.phone %></li>
+        <li>Address:    <%= @cheworder.address %></li>
+        <li>Type:       <%= @cheworder.antlertype %></li>
+        <li>Grade A:    <%= @cheworder.gradea %></li>
+        <li>Grade B:    <%= @cheworder.gradeb %></li>
+        <li>Grade C:    <%= @cheworder.gradec %></li>
+    </ul>
+      <p>Message: <br/>
+          <%= @cheworder.message %>
+      </p>
+  </body>
+</html>

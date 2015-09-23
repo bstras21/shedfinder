@@ -21,6 +21,11 @@ gem 'pg',          '0.18.3'
 #gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 gem 'certified'
 gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
+gem 'figaro'
+
+#sending delayed emails
+gem 'delayed_job_active_record'
+
 
 group :development, :test do
   gem 'byebug',      '3.4.0'

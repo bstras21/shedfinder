@@ -84,6 +84,7 @@ Rails.application.configure do
         domain: 'https://api.mailgun.net/v3/sandbox1fc33f2b63734b8cb71c613f401dbbc1.mailgun.org'
 }
 
+config.active_job.queue_adapter = :delayed_job
 
 
 # SMTP settings for gmail

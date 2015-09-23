@@ -21,6 +21,6 @@ class EmailUserRegistration < ApplicationMailer
        # mail(to: @user.email, subject: 'Sample Email')
 
 
-        email = mail from: 'bstras21@gmail.com', to: 'bstras21@gmail.com', subject: 'User created!'
+        email = mail from: ENV['ADMINEMAIL'], to: ENV['ADMINEMAIL'], subject: 'User created!'
     end
 end

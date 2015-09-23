@@ -1,0 +1,7 @@
+#HELLO: world
+#development:
+#  HELLO: developers
+#production:
+#  HELLO: users
+
+ADMINEMAIL: 'bstras21@gmail.com'

@@ -13,10 +13,11 @@ class UsersController < ApplicationController
     if @user.save
 
 #       Sends email to user when user is created.
+        #SendEmailJob.set(wait: 20.seconds).perform_later(@user)
         EmailUserRegistration.send_admin_user_registration(@user).deliver_now
 
       session[:user_id] = @user.id
-      redirect_to '/signup_success'
+        redirect_to '/user_dashboard'
     else
         render 'new'
     end

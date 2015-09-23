@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'chew_orders/new'
+
   root 'html_pages#home'
 
   get 'about_shed_finder'   => 'html_pages#about_shed_finder'
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
   get 'sell_shed_antlers' => 'html_pages#sell_shed_antlers'
   get 'buy_shed_antlers' => 'html_pages#buy_shed_antlers'
   get 'buy_antler_dog_chews' => 'html_pages#buy_antler_dog_chews'
-  get 'signup_success' => 'html_pages#signup_success'
+  get 'form_success' => 'html_pages#form_success'
 
 
 #  get 'shed_finder_sign_up' => 'users#new'
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
 
 
  resources :users
+ resources :chew_orders
 
 
 
