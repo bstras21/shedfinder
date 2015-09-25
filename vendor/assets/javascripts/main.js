@@ -1,4 +1,3 @@
-
 (function($) {
 
 	skel
@@ -19,13 +18,19 @@
 			$header = $('#header');
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+        if(sessionStorage.getItem("hideAnimation") != 'true'){
+            $body.addClass('is-loading');
+        }
 
-			$window.on('load', function() {
+            //console.log('runfunctions');
+			//$window.bind('load', function() {
+               // console.log('load');
 				window.setTimeout(function() {
+                    //console.log('timeout');
 					$body.removeClass('is-loading');
+                    sessionStorage.setItem("hideAnimation", "true");
 				}, 100);
-			});
+			//});
 
 		// Mobile?
 			if (skel.vars.mobile)

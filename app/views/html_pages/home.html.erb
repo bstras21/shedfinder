@@ -96,7 +96,7 @@
 								</li>
 								<li class="icon fa-comments-o">
 									<h3>Contact Us</h3>
-                                    <p>If you would like more information or have additional questions please <a href="#">contact us</a>.</p>
+                                    <p>If you would like more information or have additional questions please <%= link_to "Contact Us", controller: "messages", action: "new", id: @messages %>.</p>
 								</li>
 							</ul>
 						</div>
@@ -111,7 +111,7 @@
 							</header>
 							<ul class="actions vertical">
 								<li><span class="button fit special"><%= link_to "Sign Up", controller: "users", action: "new", id: @users %></span></li>
-								<li><span class="button fit"><%= link_to "Contact Us",  contact_path %></span></li></li>
+								<li><span class="button fit"><%= link_to "Contact Us", controller: "messages", action: "new", id: @messages %></span></li></li>
 							</ul>
 						</div>
 					</section>

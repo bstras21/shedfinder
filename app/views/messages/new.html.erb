@@ -1,0 +1,55 @@
+<%
+    provide(:title, "Buy Antler Dog Chews")
+%>
+<!-- Main -->
+<article id="main">
+    <header>
+        <h1>Contact Shed Finder</h1>
+        <p>#1 source for buying and selling shed antlers</p>
+    </header>
+    <section class="wrapper style5">
+        <div class="inner">
+
+
+
+            <%= form_for @message do |f| %>
+                <% if @message.errors.any? %>
+                      <h2 style="color:#f00">Errors:</h2>
+                        <ul>
+                            <% @message.errors.full_messages.each do |message| %>
+                            <li style="color:#f00"><%= message %></li>
+                            <% end %>
+                        </ul>
+            <% else %>
+            <h4>Contact us for additiona information</h4>
+            <% end %>
+                    <div class="row uniform">
+                        <div class="6u 12u$(xsmall)">
+                            <%= f.text_field :name, :placeholder => "First & Last Name" %>
+                        </div>
+                        <div class="6u$ 12u$(xsmall)">
+                            <%= f.text_field :email, :placeholder => "Email" %>
+                        </div>
+                        <div class="6u 12u$(xsmall)">
+                            <%= f.text_field :phone, :placeholder => "Phone" %>
+                        </div>
+
+
+                        <div class="12u$">
+                            <%= f.text_area :message, :placeholder => "Please enter a detailed message" %>
+                    </div>
+
+                        <div class="12u$">
+                        <ul class="actions">
+                            <li><%= f.submit "Get Quote", :class=> 'special' %></li>
+                            <% if @message.new_record? %>
+                            <li><input type="reset" value="Reset" /></li>
+                            <% end %>
+                        </ul>
+                     </div>
+                    </div>
+            <% end %>
+        </div>
+    </section>
+</article>
+<%= render 'layouts/footer' %>

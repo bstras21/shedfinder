@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+      <h1><%= @message.name %> - created a new message</h1>
+    <ul>
+        <li>Email:      <%= @message.email %></li>
+        <li>Phone:      <%= @message.phone %></li>
+
+    </ul>
+      <p>Message: <br/>
+          <%= @message.message %>
+      </p>
+  </body>
+</html>

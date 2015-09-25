@@ -18,7 +18,7 @@
                                 <li><i class="fa fa-cutlery"></i><%= link_to "Antler Dog Chews", controller: "chew_orders", action: "new", id: @cheworder %></li>
                                 <li><i class="fa fa-pencil"></i><%= link_to "Sign Up", controller: "users", action: "new", id: @users %></li>
                                 <li><i class="fa fa-key"></i><%= link_to "Log In",  login_path %></li>
-                                <li><i class="fa fa-dot-circle-o"></i><a href="#">Contact Us</a></li>
+                                <li><i class="fa fa-dot-circle-o"></i><%= link_to "Contact Us", controller: "messages", action: "new", id: @messages %></li>
                             </ul>
                         </div>
                     </li>
