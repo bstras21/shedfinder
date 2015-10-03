@@ -11,7 +11,8 @@
                                 <% end %>
                                <div class="row uniform">
                                 <div class="3u 12u$(xsmall)">
-                                     <%= link_to "Edit Account", controller: "users", action: "edit", id: current_user.id %>
+                                     <%= link_to "Edit Account", controller: "users", action: "edit", id: current_user.id %><br/>
+                                    <%= link_to "Add Listing", controller: "listings", action: "new" %>
                                 </div>
                                 <div class="9u$ 12u$(xsmall)">
                                     <div class="table-wrapper">

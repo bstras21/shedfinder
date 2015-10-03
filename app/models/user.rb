@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :listings
   validate :atleast_one_is_checked
   has_secure_password
 
